@@ -15,7 +15,7 @@ def chat():
         user_input = data.get("message", "") if data else ""
 
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo",  # <-- fallback model
             messages=[
                 {"role": "system", "content": "You are a helpful website assistant."},
                 {"role": "user", "content": user_input}
