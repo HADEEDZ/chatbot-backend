@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: chatbot-backend
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python chatbot_server.py
+    envVars:
+      - key: OPENAI_API_KEY
